@@ -1,7 +1,7 @@
 <div class="container">
 <h1>Current Player : {{player}}</h1>
-<button (click)="newgame()">Start New Game</button><br>
-<h2 *ngIf="winner">player {{winner}} won the game</h2>
+<button class="btn btn-outline-primary mb-2" (click)="newgame()">Start New Game</button><br>
+<h2 class="text-success" *ngIf="winner">player {{winner}} won the game</h2>
 
 <main>
     <app-square *ngFor="let val of squares;let i = index"[value]="val" (click)="makeMove(i)">
